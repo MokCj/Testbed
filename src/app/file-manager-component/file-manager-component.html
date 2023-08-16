@@ -1,0 +1,32 @@
+<div class="content-wrapper">
+
+  <div *ngFor="let categoryList of mCategoryList; let i = index">
+    <button class="category-button-common category-button-default"
+            mat-button
+            (click)="onCategoryMouseEnter(i)">
+      <mat-icon class="category-icon-default">{{categoryList.icon}}</mat-icon>
+      <div class="category-text-default">{{categoryList.text}}</div>
+    </button>
+    <div *ngIf="(isHovered || isSubCategoryHovered) && currentCategoryIndex === i"
+         class="sub-categories">
+      <button mat-button
+              *ngFor="let subCategory of categoryList.documentScannings; let j = index"
+              class="sub-category"
+              (drop)="onDrop($event, categoryList.text, subCategory.name)"
+              (dragover)="onDragOver($event)">
+        {{ subCategory.name }}
+      </button>
+    </div>
+  </div>
+
+  <div class="file-wrapper">
+    <div class="file-list-container"
+         *ngFor="let doc of mCurrentDocument"
+         draggable="true"
+         (dragstart)="onDragStart($event, doc)"
+         (dragend)="onDragEnd($event)">
+      <span>{{doc.fileName}}</span>
+    </div>
+  </div>
+
+</div>

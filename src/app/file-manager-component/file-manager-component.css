@@ -1,0 +1,27 @@
+.content-wrapper {
+  width: 50%;
+  height: 50%;
+  background: lightblue;
+}
+
+.example-box {
+  width: fit-content;
+}
+
+.file-list-container {
+  width: fit-content;
+  border: 1px solid black;
+}
+
+.sub-category-dropzone {
+  position: relative;
+}
+
+.sub-category-dropzone::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}

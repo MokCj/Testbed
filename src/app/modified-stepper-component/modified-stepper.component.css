@@ -1,0 +1,29 @@
+/* Customize step bar */
+.mat-horizontal-stepper-header-container {
+  background-color: #f2f2f2;
+}
+
+/* Customize completed step */
+.mat-step-header.mat-step-header-completed {
+  background-color: #008000;
+  color: #fff;
+}
+
+/* Customize active step */
+.mat-step-header.mat-step-header-active {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+/* Customize inactive step */
+.mat-step-header.mat-step-header {
+  background-color: #ccc;
+  color: #000;
+}
+
+.demo-section {
+  width: 20px;
+  height: 20px;
+  background-color: #ff9800;
+  border-radius: 50%;
+}

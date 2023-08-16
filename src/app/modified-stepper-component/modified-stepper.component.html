@@ -1,0 +1,22 @@
+<mat-horizontal-stepper>
+  <mat-step [stepControl]="firstStepFormGroup">
+    <ng-template matStepLabel>
+      <div style="display: flex; flex-direction: row">
+        <span>Step 1</span>
+        <div matBadge="4" matBadgeOverlap="false" class="demo-section"></div>
+      </div>
+    </ng-template>
+    <!-- Step content here -->
+    <div>This is step 1</div>
+  </mat-step>
+  <mat-step [stepControl]="secondStepFormGroup">
+    <ng-template matStepLabel>Step 2</ng-template>
+    <!-- Step content here -->
+    <div>This is step 2</div>
+  </mat-step>
+  <mat-step [stepControl]="thirdStepFormGroup">
+    <ng-template matStepLabel>Step 3</ng-template>
+    <!-- Step content here -->
+    <div>This is step 3</div>
+  </mat-step>
+</mat-horizontal-stepper>

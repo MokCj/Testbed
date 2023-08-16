@@ -1,0 +1,9 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+.mat-simple-snackbar {
+  white-space: pre-wrap;
+}
+
+.multiline-snackbar > simple-snack-bar{
+  white-space: break-spaces;
+}
