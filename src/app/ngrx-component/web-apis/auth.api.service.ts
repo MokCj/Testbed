@@ -8,6 +8,7 @@ import {Injectable} from "@angular/core";
 export class AuthApiService {
 
   public sendRequest(request: AuthRequest): Observable<AuthResponse> {
+    console.log('API sendRequest')
     return new Observable((observer) => {
       setTimeout(() => {
         const responseData = {

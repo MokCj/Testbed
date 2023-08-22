@@ -16,12 +16,25 @@ export class NgrxMainComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.store.subscribe((state) => {
+      console.log('store subscribe')
+      console.log('store subscribe state', state)
+    })
+  }
+
+  loginDispatch() {
     let mRequest = new AuthRequest('mUsername', 'mPassword')
-    console.log('Start login')
+    console.log('Login via dispatch')
+    this.store.dispatch(AuthActions.login({...mRequest}))
+  }
+
+  loginAuto() {
+    let mRequest = new AuthRequest('mUsername', 'mPassword')
+    console.log('Login via auto')
     this.authApiService.sendRequest(mRequest).subscribe((response) => {
+      console.log('Login completed')
       console.log(response)
     })
-    this.store.dispatch(AuthActions.login({...mRequest}))
   }
 
 }

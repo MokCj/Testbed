@@ -65,7 +65,6 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     StoreModule.forRoot({auth: authReducer}),
     EffectsModule.forRoot([AuthEffects]),
-    StoreModule.forRoot({}, {})
   ],
   exports: [RouterModule],
   providers: [AppConfigService, AuthEffects],
