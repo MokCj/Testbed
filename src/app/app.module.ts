@@ -24,6 +24,8 @@ import { EffectsModule } from '@ngrx/effects';
 import {MultiLineComponent} from "./multiline-snackbar/multiline-snackbar.component";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {CustomizedSnackbarComponent} from "./multiline-snackbar/customized-snackbar.component";
+import {AuthComponent} from "./auth-component/auth.component";
+import {LoginComponent} from "./auth-component/login.component";
 
 /**
  * This is the main module of the application.
@@ -50,7 +52,9 @@ const routes: Routes = [
     SecondTimerComponent,
     NgrxMainComponent,
     MultiLineComponent,
-    CustomizedSnackbarComponent
+    CustomizedSnackbarComponent,
+    AuthComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

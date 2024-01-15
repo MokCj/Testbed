@@ -24,6 +24,11 @@ export const selectAuthResponse = createSelector(
 
 export const authReducer = createReducer(
   initialState,
+  on(AuthActions.reset, (state) => {
+    console.log('reset reducer')
+    console.log('reset reducer state', state)
+    return ({...state, loading: false, response: new AuthResponse(-1, '', ''), error: null});
+  }),
   on(AuthActions.login, (state) => {
     console.log('login reducer')
     console.log('login reducer state', state)

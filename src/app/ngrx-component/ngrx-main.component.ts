@@ -37,4 +37,8 @@ export class NgrxMainComponent implements OnInit {
     })
   }
 
+  reset() {
+    this.store.dispatch(AuthActions.reset())
+  }
+
 }
